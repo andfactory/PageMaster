@@ -11,6 +11,7 @@
 		04765E17220EAAE2000AC346 /* PageMasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04765E16220EAAE2000AC346 /* PageMasterTests.swift */; };
 		04765E19220EAAE2000AC346 /* PageMaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 04765E0B220EAAE2000AC346 /* PageMaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04765E70220EABC8000AC346 /* PageMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04765E6F220EABC8000AC346 /* PageMaster.swift */; };
+		2C32C97929B825C40076A849 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C32C97829B825C40076A849 /* Array+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		04765E16220EAAE2000AC346 /* PageMasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageMasterTests.swift; sourceTree = "<group>"; };
 		04765E18220EAAE2000AC346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04765E6F220EABC8000AC346 /* PageMaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageMaster.swift; sourceTree = "<group>"; };
+		2C32C97829B825C40076A849 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +94,18 @@
 		04765E6E220EABB6000AC346 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2C32C97729B825AF0076A849 /* Extensions */,
 				04765E6F220EABC8000AC346 /* PageMaster.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		2C32C97729B825AF0076A849 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2C32C97829B825C40076A849 /* Array+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04765E70220EABC8000AC346 /* PageMaster.swift in Sources */,
+				2C32C97929B825C40076A849 /* Array+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
