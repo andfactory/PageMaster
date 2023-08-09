@@ -70,6 +70,14 @@ extension PageMaster {
         self.setViewControllers([self.vcList[page]], direction: self.pageDirection(from: page), animated: animated, completion: nil)
         self.currentPage = page
     }
+    
+    public func updateSwipeEnable(_ isEnable: Bool) {
+        self.view.subviews.forEach { view in
+            if let scrollView = view as? UIScrollView {
+                scrollView.isScrollEnabled = isEnable
+            }
+        }
+    }
 }
 
 // MARK: - Direction
