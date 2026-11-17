@@ -17,7 +17,7 @@
 
 import UIKit
 
-public protocol PageMasterDelegate: class {
+public protocol PageMasterDelegate: AnyObject {
     func pageMaster(_ master: PageMaster, didChangePage page: Int)
 }
 
@@ -111,7 +111,7 @@ extension PageMaster {
 extension PageMaster {
     
     private func nextIndex(from current: UIViewController) -> Int? {
-        guard let currentIndex = self.vcList.index(of: current) else {
+        guard let currentIndex = self.vcList.firstIndex(of: current) else {
             return nil
         }
         
@@ -144,7 +144,7 @@ extension PageMaster {
     }
     
     private func previousIndex(from current: UIViewController) -> Int? {
-        guard let currentIndex = self.vcList.index(of: current) else {
+        guard let currentIndex = self.vcList.firstIndex(of: current) else {
             return nil
         }
         
@@ -199,7 +199,9 @@ extension PageMaster: UIPageViewControllerDataSource {
 extension PageMaster: UIPageViewControllerDelegate {
     
     public func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        let current = pageViewController.viewControllers![0]
-        self.currentPage = self.vcList.index(of: current)!
+        if let current = pageViewController.viewControllers?[safe: 0],
+           let currentPage = self.vcList.firstIndex(of: current) {
+            self.currentPage = currentPage
+        }
     }
 }
